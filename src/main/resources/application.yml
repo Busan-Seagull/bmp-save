@@ -1,0 +1,29 @@
+#spring
+spring:
+  output:
+    ansi:
+      enabled: always
+
+  #db
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/devtest
+    username: root
+    password: ryan1234
+
+  #jpa
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+
+
+  #servlet
+  servlet:
+    multipart:
+      max-file-size: 50MB # 최대파일크기
+      max-request-size: 100MB # 전체 요청 크기 ( 파일 + 기타 파라미터)
+
+#server
+server:
+  port: 9090
